@@ -21,88 +21,120 @@ class MainActivity : AppCompatActivity() {
         fun operationFunction(view: View) {
             when(view.id) {
             R.id.btn_one -> {
-                val number = eTextNum.text.toString() + "1"
-                eTextNum.setText(number)
+                numberClicked(1)
 
             }
                 R.id.btn_two -> {
-                val number = eTextNum.text.toString() + "2"
-                eTextNum.setText(number)
+                    numberClicked(2)
 
             }R.id.btn_three -> {
-                val number = eTextNum.text.toString() + "3"
-                eTextNum.setText(number)
+                numberClicked(3)
 
             }     R.id.btn_four -> {
-                val number = eTextNum.text.toString() + "4"
-                eTextNum.setText(number)
+                numberClicked(4)
 
             }     R.id.btn_five -> {
-                val number = eTextNum.text.toString() + "5"
-                eTextNum.setText(number)
+                numberClicked(5)
 
             }     R.id.btn_six -> {
-                val number = eTextNum.text.toString() + "6"
-                eTextNum.setText(number)
+                numberClicked(6)
 
             }     R.id.btn_seven -> {
-                val number = eTextNum.text.toString() + "7"
-                eTextNum.setText(number)
+                numberClicked(7)
 
             }     R.id.btn_eight -> {
-                val number = eTextNum.text.toString() + "8"
-                eTextNum.setText(number)
+                numberClicked(8)
 
             }     R.id.btn_nine -> {
-                val number = eTextNum.text.toString() + "9"
-                eTextNum.setText(number)
+                numberClicked(9)
 
             }     R.id.btn_zero -> {
-                val number = eTextNum.text.toString() + "0"
-                eTextNum.setText(number)
+                numberClicked(0)
 
             }     R.id.btn_dot -> {
-                val number = eTextNum.text.toString() + "."
-                eTextNum.setText(number)
+               dotClicked()
 
             }
                 R.id.btn_c -> {
-                    eTextNum.setText("")
+                   clearClicked()
                 }
                 R.id.btn_plus -> {
-                    num1 = eTextNum.text.toString().toFloat()
-                    eTextNum.setText("")
-                    isPlus = true
+                   plusClicked()
                 }
                 R.id.btn_minus -> {
-                    num1 = eTextNum.text.toString().toFloat()
-                    eTextNum.setText("")
-                    isMinus = true
+                    minusClicked()
                 }
                 R.id.btn_del -> {
-                        num1 = eTextNum.text.toString().toFloat()
-                    eTextNum.setText("")
-                    isDel = true
+                    delClicked()
                 }
                 R.id.btn_equal -> {
-                    val num2 = eTextNum.text.toString().toFloat()
-                    var result : Float = 0.0f
-                    if (isPlus) {
-                         result = num1 + num2
-                    }
-                    else if (isMinus) {
-                         result = num1 - num2
-                    }
-                    else if (isDel) {
-                         result = num1 / num2
-                    }
-                    isPlus = false
-                    isDel = false
-                    isMinus = false
-                    eTextNum.setText(result.toString())
+                    equalClicked()
                 }
 
-
         }
+    }
+    fun numberClicked(numberClicked : Int) {
+        val number = eTextNum.text.toString() + numberClicked
+        eTextNum.setText(number)
+    }
+    fun dotClicked() {
+        val number = eTextNum.text.toString() + "."
+        eTextNum.setText(number)
+    }
+    fun plusClicked() {
+        num1 = eTextNum.text.toString().toFloat()
+        eTextNum.setText("")
+        isPlus = true
+    }
+    fun minusClicked() {
+        num1 = eTextNum.text.toString().toFloat()
+        eTextNum.setText("")
+        isMinus = true
+    }
+    fun delClicked() {
+        num1 = eTextNum.text.toString().toFloat()
+        eTextNum.setText("")
+        isDel = true
+    }
+    fun clearClicked() {
+        eTextNum.setText("")
+    }
+    fun equalClicked() {
+
+
+        when  {
+            isPlus -> {
+                plus()
+            }
+
+        isMinus -> {
+            minus()
+        }
+        isDel ->  {
+            del()
+        }
+    }
+
+
+
+    }
+
+    fun plus() {
+        val num2 = eTextNum.text.toString().toFloat()
+        val result = num1 + num2
+        isPlus = false
+        eTextNum.setText(result.toString())
+    }
+    fun minus() {
+        val num2 = eTextNum.text.toString().toFloat()
+        val result = num1 - num2
+        isMinus = false
+        eTextNum.setText(result.toString())
+    }
+    fun del() {
+        val num2 = eTextNum.text.toString().toFloat()
+        val result = num1 / num2
+        isDel = false
+        eTextNum.setText(result.toString())
     }
 }
