@@ -34,21 +34,27 @@
 
             <Button
                 android:text="@string/Button_one"
+                android:onClick="operationFunction"
+                android:id="@+id/btn_one"
                 style="@style/button_style" />
 
             <Button
                 style="@style/button_style"
-
+                android:id="@+id/btn_two"
+                android:onClick="operationFunction"
                 android:text="@string/button_two" />
 
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_three"
+                android:onClick="operationFunction"
                 android:text="@string/button_three" />
 
             <Button
                 style="@style/button_style"
-
+                android:id="@+id/btn_del"
+                android:onClick="operationFunction"
                 android:text="@string/button_del" />
 
         </LinearLayout>
@@ -59,19 +65,27 @@
 
             <Button
                 android:text="@string/btn_four"
+                android:id="@+id/btn_four"
+                android:onClick="operationFunction"
                 style="@style/button_style" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_five"
+                android:onClick="operationFunction"
                 android:text="@string/btn_five" />
 
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_six"
+                android:onClick="operationFunction"
                 android:text="@string/btn_six" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_plus"
+                android:onClick="operationFunction"
                 android:text="@string/btn_plus" />
 
         </LinearLayout>
@@ -82,19 +96,27 @@
 
             <Button
                 android:text="@string/btn_seven"
+                android:id="@+id/btn_seven"
+                android:onClick="operationFunction"
                 style="@style/button_style" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_eight"
+                android:onClick="operationFunction"
                 android:text="@string/btn_eight" />
 
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_nine"
+                android:onClick="operationFunction"
                 android:text="@string/btn_nine" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_minus"
+                android:onClick="operationFunction"
                 android:text="@string/btn_minus" />
 
         </LinearLayout>
@@ -106,19 +128,27 @@
 
             <Button
                 android:text="@string/btn_c"
+                android:id="@+id/btn_c"
+                android:onClick="operationFunction"
                 style="@style/button_style" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_zero"
+                android:onClick="operationFunction"
                 android:text="@string/btn_zero" />
 
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_dot"
+                android:onClick="operationFunction"
                 android:text="@string/btn_dot" />
 
             <Button
                 style="@style/button_style"
+                android:id="@+id/btn_equal"
+                android:onClick="operationFunction"
                 android:text="@string/btn_equal" />
 
         </LinearLayout>
